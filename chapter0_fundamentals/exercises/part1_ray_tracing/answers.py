@@ -374,4 +374,8 @@ def raytrace_triangle_with_bug(
 intersects = raytrace_triangle_with_bug(rays2d, test_triangle)
 img = intersects.reshape(num_pixels_y, num_pixels_z).int()
 imshow(img, origin="lower", width=600, title="Triangle (as intersected by rays)")
+
 # %%
+dist = t.tensor([1,2,3])
+dist = einops.repeat(dist, 'a -> (a 7)')
+dist
