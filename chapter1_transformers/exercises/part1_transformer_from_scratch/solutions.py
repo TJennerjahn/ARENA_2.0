@@ -230,7 +230,6 @@ class LayerNorm(nn.Module):
 		return residual * self.w + self.b
 
 
-
 if MAIN:
 	rand_float_test(LayerNorm, [2, 4, 768])
 	load_gpt2_test(LayerNorm, reference_gpt2.ln_final, cache["resid_post", 11])
